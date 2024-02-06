@@ -1,29 +1,35 @@
 import { styled, Flex, Image } from "@chakra-ui/react";
 import { Button } from "../button/button";
 import { MegaMenuButton } from "./mega-menu-button/mega-menu-button";
+import { menuHeight } from "@/theme/globals";
 
 const Container = styled(Flex, {
   baseStyle: {
     w: "100%",
-    h: "101px",
+    minH: menuHeight,
     px: { base: "24px", lg: "105px" },
-    alignItems: "center",
-    justifyContent: "space-between",
+    py: "20px",
     position: "fixed",
     bg: "secondary.white",
-    borderBottom: "1px solid",
-    borderBottomColor: "secondary.gray",
+    borderBottomWidth: { base: "0", lg: "1px" },
+    border: "secondary.gray",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
 
-const DesktopMenu = styled(Flex, {
+const InnerContainer = styled(Flex, {
   baseStyle: {
+    w: "100%",
+    h: "100%",
     alignItems: "center",
     justifyContent: "space-between",
-    maxW: "721px",
-    w: "100%",
+    bg: "primary.white",
+    zIndex: "2",
   },
 });
+
 
 const Logo = styled(Image, {
   baseStyle: {
@@ -55,9 +61,9 @@ const MobileMenuButton = styled(MegaMenuButton, {
 
 export const MegaMenuElements = {
   Container,
+  InnerContainer,
   Logo,
   CTAButton,
-  DesktopMenu,
   ColumnRight,
   MobileMenuButton,
 };

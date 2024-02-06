@@ -1,0 +1,1 @@
+export const menuHeight = {base: "94px", lg: "100px"}
