@@ -2,6 +2,8 @@ import { FlexProps, useBreakpoint, Drawer } from "@chakra-ui/react";
 import { MegaMenuNavigationElements as el } from "./mega-menu-navigation.elements";
 import { MegaMenuDataType } from "@/domain/mega-menu.t";
 import { MegaMenuLink } from "../mega-menu-link/mega-menu-link";
+import { Button } from "@/components/button/button";
+import { MegaMenuCTAButton } from "../mega-menu-cta-button/mega-menu-cta-button";
 
 interface IMegaMenuNavigationProps extends FlexProps {
   isMobileMenuOpen: boolean;
@@ -59,6 +61,7 @@ export const MegaMenuNavigation = ({
               {dataItem.title}
             </el.StyledLink>
           ))}
+          {breakpoint === "base" && <MegaMenuCTAButton fullWidth />}
         </el.Container>
         {activeElementIndex !== null && (
           <Drawer
@@ -88,6 +91,11 @@ export const MegaMenuNavigation = ({
                       </el.StyledLink>
                     );
                   })}
+                {breakpoint === "base" && (
+                  <el.ButtonContainer>
+                    <MegaMenuCTAButton fullWidth />{" "}
+                  </el.ButtonContainer>
+                )}
               </el.SideDrawerBody>
             </el.SideDrawerContent>
           </Drawer>

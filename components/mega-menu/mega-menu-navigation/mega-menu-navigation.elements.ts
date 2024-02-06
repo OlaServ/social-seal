@@ -1,5 +1,5 @@
 import { menuHeight } from "@/theme/globals";
-import { DrawerBody, DrawerContent, styled } from "@chakra-ui/react";
+import { DrawerBody, DrawerContent, Flex, styled } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { MegaMenuLink } from "../mega-menu-link/mega-menu-link";
 
@@ -41,9 +41,16 @@ const StyledLink = styled(MegaMenuLink, {
   },
 });
 
+const ButtonContainer = styled(Flex, {
+  baseStyle: {
+    w: "100%",
+    px: "15px;",
+  },
+});
 export const MegaMenuNavigationElements = {
   Container,
   SideDrawerContent,
   SideDrawerBody,
   StyledLink,
+  ButtonContainer,
 };

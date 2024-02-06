@@ -5,6 +5,7 @@ import { MegaMenuDataType } from "@/domain/mega-menu.t";
 import { useState } from "react";
 import { MegaMenuDrawer } from "./mega-menu-drawer/mega-menu-drawer";
 import { MegaMenuNavigation } from "./mega-menu-navigation/mega-menu-navigation";
+import { MegaMenuCTAButton } from "./mega-menu-cta-button/mega-menu-cta-button";
 
 export interface IMegaMenuProps extends FlexProps {
   data: MegaMenuDataType;
@@ -70,7 +71,7 @@ export const MegaMenu = ({ data, ...rest }: IMegaMenuProps) => {
             />
           )}
           <el.ColumnRight>
-            {showCTAinNavbar && <el.CTAButton>Speak With Us!</el.CTAButton>}
+            {showCTAinNavbar && <MegaMenuCTAButton />}
             {showMobileMenuButton && (
               <el.MobileMenuButton onClick={toggleMobileMenu} />
             )}

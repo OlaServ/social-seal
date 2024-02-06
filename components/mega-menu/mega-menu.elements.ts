@@ -37,15 +37,6 @@ const Logo = styled(Image, {
   },
 });
 
-const CTAButton = styled(Button, {
-  baseStyle: {
-    bg: "primary.orange",
-    color: "primary.white",
-    h: "54px",
-    minW: "186px",
-  },
-});
-
 const ColumnRight = styled(Flex, {
   baseStyle: {
     justifyContent: "flex-end",
@@ -63,7 +54,6 @@ export const MegaMenuElements = {
   Container,
   InnerContainer,
   Logo,
-  CTAButton,
   ColumnRight,
   MobileMenuButton,
 };
