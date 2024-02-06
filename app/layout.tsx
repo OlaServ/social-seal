@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import ThemeProvider from "@/theme/theme-provider";
+import './globals.css'
 
 export const metadata: Metadata = {
   title: "Social Seal",
@@ -13,9 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <ThemeProvider>
-        <body>{children}</body>
-      </ThemeProvider>
+      <body>{children}</body>
     </html>
   );
 }

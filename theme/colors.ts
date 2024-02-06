@@ -13,5 +13,7 @@ export const colors = {
     black: "#252541",
     gray: "#E5E7EC",
     blue: "#3482FF",
+    white: "#FEFEFE",
+    whiteOverlay: "#F5F5F5"
   },
 };
