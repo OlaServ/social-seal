@@ -25,7 +25,7 @@ export const MegaMenuDrawer = ({
       closeOnEsc
       placement="top"
     >
-      <DrawerContent pt="100px">
+      <el.Content pt="100px">
         <el.Body gridTemplateColumns={{base: "50% 50%", lg: `repeat(${sections.length}, 1fr)`}}>
           {sections.map((section, idx) => {
             const { title, description, sectionElements } = section;
@@ -56,7 +56,7 @@ export const MegaMenuDrawer = ({
             <el.CTAButton>View All Services</el.CTAButton>
           </el.BottomRow>
         </el.Body>
-      </DrawerContent>
+      </el.Content>
       <DrawerOverlay bg="secondary.whiteOverlay" opacity="0.2" zIndex="100" />
     </Drawer>
   );
