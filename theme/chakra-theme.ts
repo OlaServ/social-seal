@@ -7,7 +7,7 @@ const poppins = Poppins({ weight: ["200", "400", "600", "800"], subsets: ['latin
 const breakpoints = {
   base: "0px",
   sm: "460px",
-  md: "768px",
+  md: "830px",
   lg: "1218px",
   xl: "1400px",
   "2xl": "1536px",

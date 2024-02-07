@@ -4,15 +4,11 @@ import {
   DrawerBody,
   GridItem,
   Heading,
-  DrawerContent,
   List,
   ListItem,
 } from "@chakra-ui/react";
 import { Button } from "@/components/button/button";
 
-const Content = styled(DrawerContent, {
-  baseStyle: {},
-});
 
 const Body = styled(DrawerBody, {
   baseStyle: {
@@ -96,7 +92,6 @@ const CTAButton = styled(Button, {
 });
 
 export const MegaMenuDrawerElements = {
-  Content,
   Body,
   Section,
   Title,

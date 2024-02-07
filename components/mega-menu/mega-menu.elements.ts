@@ -16,7 +16,7 @@ const Container = styled(Flex, {
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
-    zIndex: "7000",
+    zIndex: "100",
   },
 });
 
