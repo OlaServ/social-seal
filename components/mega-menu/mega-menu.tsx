@@ -74,12 +74,12 @@ export const MegaMenu = ({ data, ...rest }: IMegaMenuProps) => {
               onCloseSideMenu={() => setIsSideMenuOpen(false)}
             />
           )}
-          <Flex>
+          <el.ColumnRight>
             {showCTAinNavbar && <MegaMenuCTAButton />}
             {showMobileMenuButton && (
               <el.MobileMenuButton onClick={toggleMobileMenu} />
             )}
-          </Flex>
+          </el.ColumnRight>
         </el.InnerContainer>
         {showMobileMenuButton && isMobileMenuOpen && (
           <MegaMenuNavigation
