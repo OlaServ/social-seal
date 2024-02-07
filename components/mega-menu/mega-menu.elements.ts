@@ -37,6 +37,12 @@ const Logo = styled(Image, {
   },
 });
 
+const ColumnRight = styled(Flex, {
+  baseStyle: {
+    alignItems: "center"
+  },
+});
+
 const MobileMenuButton = styled(MegaMenuButton, {
   baseStyle: {
     ml: "40px",
@@ -47,5 +53,6 @@ export const MegaMenuElements = {
   Container,
   InnerContainer,
   Logo,
+  ColumnRight,
   MobileMenuButton,
 };
