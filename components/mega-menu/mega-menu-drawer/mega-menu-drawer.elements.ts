@@ -6,8 +6,16 @@ import {
   Heading,
   List,
   ListItem,
+  DrawerContent,
 } from "@chakra-ui/react";
 import { Button } from "@/components/button/button";
+import { menuHeight } from "@/theme/globals";
+
+const Content = styled(DrawerContent, {
+  baseStyle: {
+    mt: menuHeight,
+  }
+})
 
 
 const Body = styled(DrawerBody, {
@@ -18,6 +26,7 @@ const Body = styled(DrawerBody, {
     px: "120px",
     gridTemplateRows: {base: "auto auto auto",lg: "90% 10%"},
     pb: "84px",
+    
   },
 });
 
@@ -92,6 +101,7 @@ const CTAButton = styled(Button, {
 });
 
 export const MegaMenuDrawerElements = {
+  Content,
   Body,
   Section,
   Title,

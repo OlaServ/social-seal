@@ -25,7 +25,7 @@ export const MegaMenuNavigation = ({
 }: IMegaMenuNavigationProps) => {
   const breakpoint = useBreakpoint();
   const isDesktop =
-    breakpoint !== "base" && breakpoint !== "sm" && breakpoint !== "md";
+    breakpoint !== "base" && breakpoint !== "sm" ;
 
   const MappedLinks = data.map((dataItem, index) => (
     <MegaMenuLink
@@ -63,7 +63,7 @@ export const MegaMenuNavigation = ({
           ))}
           {breakpoint === "base" && <MegaMenuCTAButton fullWidth />}
         </el.Container>
-        {activeElementIndex !== null && (
+        {activeElementIndex !== null && !isDesktop && (
           <Drawer
             isOpen={isSideMenuOpen}
             onClose={onCloseSideMenu}
