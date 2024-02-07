@@ -1,7 +1,6 @@
 "use client";
 import { HeroElements as el } from "./hero.elements";
 import { useBreakpointValue } from "@chakra-ui/react";
-import { Image } from "@chakra-ui/react";
 
 export const Hero = () => {
   const isMobile = useBreakpointValue(

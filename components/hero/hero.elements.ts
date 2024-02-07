@@ -136,19 +136,18 @@ const MobileBottomPart = styled(Flex, {
 });
 
 const LogosContainer = styled(Center, {
-    baseStyle: {
-        w: "100%",
-        overflowX: "hidden",
-        borderRadius: "20px",
-        bg: "url(/assets/images/partner_logos.png)",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        h: "167px",
-        mt: {base: "51px", md: "99px", lg:  "55px"},
-        transform: "translateY(50%)"
-    
-    }
-})
+  baseStyle: {
+    w: "100%",
+    overflowX: "hidden",
+    borderRadius: "20px",
+    bg: "url(/assets/images/partner_logos.png)",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    h: "167px",
+    mt: { base: "51px", md: "99px", lg: "55px" },
+    transform: "translateY(50%)",
+  },
+});
 
 export const HeroElements = {
   Container,
@@ -165,5 +164,5 @@ export const HeroElements = {
   StyledImage,
   SocialMediaIcons,
   MobileBottomPart,
-  LogosContainer
+  LogosContainer,
 };
