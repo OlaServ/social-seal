@@ -7,15 +7,16 @@ const Container = styled(Flex, {
   baseStyle: {
     w: "100%",
     minH: menuHeight,
-    px: { base: "24px", lg: "105px" },
+    px: { base: "16px", md: "38px", lg: "120px" },
     py: "20px",
-    position: "fixed",
+    position: "sticky",
+    top: "0",
     bg: "secondary.white",
-    borderBottomWidth: { base: "0", lg: "1px" },
     border: "secondary.gray",
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
+    zIndex: "7000",
   },
 });
 
@@ -30,7 +31,6 @@ const InnerContainer = styled(Flex, {
   },
 });
 
-
 const Logo = styled(Image, {
   baseStyle: {
     h: { base: "54px", lg: "85px" },
@@ -38,10 +38,7 @@ const Logo = styled(Image, {
 });
 
 const ColumnRight = styled(Flex, {
-  baseStyle: {
-    justifyContent: "flex-end",
-    alignItems: "center",
-  },
+  baseStyle: {},
 });
 
 const MobileMenuButton = styled(MegaMenuButton, {

@@ -5,10 +5,10 @@ const StyledButton = styled(Button, {
     borderRadius: "20px",
     p: "19px 33px",
     fontSize: "16px",
-    fontWeight: "400",
     boxSizing: "border-box",
     textAlign: "center",
     display: "flex",
+    w: "max-content"
   },
 });
 export const ButtonElements = { StyledButton };
