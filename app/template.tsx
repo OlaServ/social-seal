@@ -8,7 +8,8 @@ import { MegaMenuData } from "@/data/mega-menu";
 const RouteLayout = ({ children }: { children: ReactNode }) => {
   return (
     <ThemeProvider>
-      <MegaMenu data={MegaMenuData}/>
+      <MegaMenu data={MegaMenuData} />
+
       {children}
     </ThemeProvider>
   );

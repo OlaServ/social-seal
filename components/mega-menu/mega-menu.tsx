@@ -1,5 +1,5 @@
 "use client";
-import { FlexProps, useBreakpointValue } from "@chakra-ui/react";
+import { FlexProps, useBreakpointValue, Flex } from "@chakra-ui/react";
 import { MegaMenuElements as el } from "./mega-menu.elements";
 import { MegaMenuDataType } from "@/domain/mega-menu.t";
 import { useState } from "react";
@@ -25,8 +25,8 @@ export const MegaMenu = ({ data, ...rest }: IMegaMenuProps) => {
   };
 
   const showCTAinNavbar = useBreakpointValue(
-    { base: false, sm: true },
-    { fallback: "sm" }
+    { base: false, md: true },
+    { fallback: "md" }
   );
 
   const showMobileMenuButton = useBreakpointValue(
@@ -56,9 +56,13 @@ export const MegaMenu = ({ data, ...rest }: IMegaMenuProps) => {
     ? data[activeElementIndex].sections
     : null;
 
+  const containerStyles = isDrawerOpen
+    ? { borderBottomWidth: { base: "0", lg: "1px" }, bg: "secondary.white" }
+    : { borderBottomWidth: "0", bg: "primary.white" };
+
   return (
     <>
-      <el.Container {...rest}>
+      <el.Container {...containerStyles} {...rest}>
         <el.InnerContainer>
           <el.Logo src="/assets/images/logo.png" />
           {!showMobileMenuButton && (
@@ -70,12 +74,12 @@ export const MegaMenu = ({ data, ...rest }: IMegaMenuProps) => {
               onCloseSideMenu={() => setIsSideMenuOpen(false)}
             />
           )}
-          <el.ColumnRight>
+          <Flex>
             {showCTAinNavbar && <MegaMenuCTAButton />}
             {showMobileMenuButton && (
               <el.MobileMenuButton onClick={toggleMobileMenu} />
             )}
-          </el.ColumnRight>
+          </Flex>
         </el.InnerContainer>
         {showMobileMenuButton && isMobileMenuOpen && (
           <MegaMenuNavigation
