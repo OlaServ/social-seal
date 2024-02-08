@@ -1,12 +1,12 @@
-import { Hero } from "@/sections/hero/hero";
-import { Counters } from "@/sections/counters/counters";
+import { HeroSection } from "@/sections/hero-section/hero-section";
+import { CountersSection } from "@/sections/counters-section/counters-section";
 import { CountersSectionData } from "@/data/counters-section";
 
 export default function Home() {
   return (
     <main>
-      <Hero />
-      <Counters {...CountersSectionData} />
+      <HeroSection />
+      <CountersSection {...CountersSectionData} />
     </main>
   );
 }

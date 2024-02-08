@@ -1,8 +1,9 @@
-import { Flex, Grid, styled, Text } from "@chakra-ui/react";
+import { Flex, Grid, styled, Text, chakra } from "@chakra-ui/react";
 import { Button } from "@/components/button/button";
 
-const Container = styled(Grid, {
+const Container = styled("section", {
   baseStyle: {
+    display: "grid",
     w: "100%",
     pt: { base: "144px", sm: "164px", lg: "195px" },
     px: { base: "16px", sm: "84px", lg: "120px" },
@@ -105,7 +106,7 @@ const HelpButton = styled(Button, {
   },
 });
 
-export const CountersElements = {
+export const CountersSectionElements = {
   Container,
   ColumnLeft,
   Subtitle,
