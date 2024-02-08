@@ -7,6 +7,7 @@ export const colors = {
     blackCharcoal: "#2A2A2A",
     white: "#FFFFFF",
     gray: "#727272",
+    grayLight: "#BBBBBB",
     yellow: "#FFD437",
   },
 
@@ -17,6 +18,14 @@ export const colors = {
     grayLight: "#D9D9D9",
     blue: "#3482FF",
     white: "#FEFEFE",
-    whiteOverlay: "#F5F5F5"
+    whiteOverlay: "#F5F5F5",
+  },
+
+  counter: {
+    orange: "#F76766",
+    blue: "#265FDB",
+    teal: "#57C0CE",
+    violet: "#A666F7",
+    gray: "#6B645D",
   },
 };

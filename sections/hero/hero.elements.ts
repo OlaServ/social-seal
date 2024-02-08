@@ -8,8 +8,8 @@ import {
   Image,
   Center,
 } from "@chakra-ui/react";
-import { Button } from "../button/button";
-import { Carousel } from "../carousel/carousel";
+import { Button } from "../../components/button/button";
+import { Carousel } from "../../components/carousel/carousel";
 
 const Container = styled(Flex, {
   baseStyle: {
