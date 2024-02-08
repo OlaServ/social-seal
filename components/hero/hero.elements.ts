@@ -9,6 +9,7 @@ import {
   Center,
 } from "@chakra-ui/react";
 import { Button } from "../button/button";
+import { Carousel } from "../carousel/carousel";
 
 const Container = styled(Flex, {
   baseStyle: {
@@ -149,6 +150,13 @@ const LogosContainer = styled(Center, {
   },
 });
 
+const StyledCarousel = styled(Carousel, {
+  baseStyle: {
+    mt: { base: "51px", md: "99px", lg: "55px" },
+    transform: "translateY(50%)",
+  }
+})
+
 export const HeroElements = {
   Container,
   InnerContainer,
@@ -165,4 +173,5 @@ export const HeroElements = {
   SocialMediaIcons,
   MobileBottomPart,
   LogosContainer,
+  StyledCarousel
 };
