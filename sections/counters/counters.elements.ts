@@ -54,7 +54,7 @@ const ColumnRight = styled(Grid, {
   baseStyle: {
     gridTemplateColumns: { base: "250px", md: "250px 250px" },
     gridGap: "30px",
-    pr: "20px",
+    pr: {base: "0", md: "20px"},
     mt: {
       base: "56px",
       md: "none",
