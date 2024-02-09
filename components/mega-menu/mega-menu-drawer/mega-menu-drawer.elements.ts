@@ -16,14 +16,14 @@ import { menuHeight } from "@/theme/globals";
 const Content = styled(DrawerContent, {
   baseStyle: {
     mt: menuHeight,
-    pt: "42px",
+    pt: { md: "100px", lg: "76px" },
   },
 });
 
 const Body = styled(DrawerBody, {
   baseStyle: {
     pb: { md: "56px", xl: "48px" },
-    minHeight: { md: "67vh", xl: "45vh" },
+    minHeight: { md: "45vh" },
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
@@ -34,10 +34,9 @@ const BodyGrid = styled(Grid, {
   baseStyle: {
     justifyItems: "center",
     w: "100%",
-    px: "120px",
-    gridTemplateRows: { base: "auto auto", xl: "100%" },
+    px: {md: "64px", xl: "120px"},
+    gridTemplateRows: { base: "auto auto", lg: "100%" },
     gridColumnGap: "28px",
-    gridRowGap: "80px",
   },
 });
 
@@ -50,10 +49,9 @@ const Section = styled(GridItem, {
 const Title = styled(Heading, {
   baseStyle: {
     color: "secondary.black",
-    fontSize: "28px",
+    fontSize: {md: "28px", lg: "24px", xl: "28px"},
     fontWeight: "200",
     pt: "0",
-    pb: "28px",
     borderBottom: "1px solid",
     borderBottomColor: "secondary.blueGrayish",
     mb: "28px",
@@ -64,10 +62,9 @@ const Title = styled(Heading, {
 
 const Description = styled(Text, {
   baseStyle: {
-    fontSize: "19px",
+    fontSize: {md: "16px", lg: "19px"},
     color: "primary.gray",
     lineHeight: "1.2",
-    pb: "24px",
   },
 });
 const Elements = styled(List, {
@@ -82,8 +79,8 @@ const Elements = styled(List, {
 
 const ListElement = styled(ListItem, {
   baseStyle: {
-    fontSize: "19px",
-    lineHeight: "32px",
+    fontSize: {md: "16px", lg: "19px"},
+    lineHeight: {md: "28px", lg: "32px"},
     color: "primary.gray",
     verticalAlign: "middle",
     bgRepeat: "no-repeat",

@@ -57,7 +57,7 @@ export const MegaMenu = ({ data, ...rest }: IMegaMenuProps) => {
     : null;
 
   const containerStyles = isDrawerOpen
-    ? { borderBottomWidth: { base: "0", lg: "1px" }, bg: "secondary.white" }
+    ? { borderBottomWidth: { base: "0", md: "1px" }, bg: "secondary.white" }
     : { borderBottomWidth: "0", bg: "primary.white" };
 
   return (
