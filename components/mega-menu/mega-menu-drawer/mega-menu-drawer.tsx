@@ -4,6 +4,7 @@ import {
   DrawerContent,
   DrawerProps,
   DrawerOverlay,
+  DrawerBody,
 } from "@chakra-ui/react";
 import { MegaMenuDrawerElements as el } from "./mega-menu-drawer.elements";
 import { MegaMenuSectionType } from "@/domain/mega-menu.t";
@@ -24,9 +25,11 @@ export const MegaMenuDrawer = ({
       closeOnOverlayClick
       closeOnEsc
       placement="top"
+
     >
-      <el.Content pt="100px">
-        <el.Body gridTemplateColumns={{base: "50% 50%", lg: `repeat(${sections.length}, 1fr)`}}>
+      <el.Content>
+        <el.Body>
+        <el.BodyGrid gridTemplateColumns={{base: "50% 50%", xl: `repeat(${sections.length}, 1fr)`}}>
           {sections.map((section, idx) => {
             const { title, description, sectionElements } = section;
             return (
@@ -51,8 +54,9 @@ export const MegaMenuDrawer = ({
               </el.Section>
             );
           })}
-          <el.BottomRow>
-            {" "}
+        
+        </el.BodyGrid>
+        <el.BottomRow>
             <el.CTAButton>View All Services</el.CTAButton>
           </el.BottomRow>
         </el.Body>

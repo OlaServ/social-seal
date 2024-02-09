@@ -13,6 +13,7 @@ const Container = styled(motion.div, {
     transition: "all 0.3s ease-in-out",
     zIndex: { base: "100", md: "6000" },
     flexDirection: { base: "column", md: "row" },
+    mt: {md: "36px", lg: "0"},
   },
 });
 
