@@ -13,6 +13,7 @@ export const colors = {
   },
 
   secondary: {
+    blueGrayish: "#E5E7EC",
     black: "#252541",
     blackRaisin: "#1D1D25",
     blackHeading: "#0B0B0B",

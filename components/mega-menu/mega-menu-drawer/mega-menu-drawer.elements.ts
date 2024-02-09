@@ -1,12 +1,14 @@
 import {
   styled,
   Text,
-  DrawerBody,
+  Flex,
   GridItem,
   Heading,
   List,
   ListItem,
   DrawerContent,
+  Grid,
+  DrawerBody,
 } from "@chakra-ui/react";
 import { Button } from "@/components/button/button";
 import { menuHeight } from "@/theme/globals";
@@ -14,25 +16,34 @@ import { menuHeight } from "@/theme/globals";
 const Content = styled(DrawerContent, {
   baseStyle: {
     mt: menuHeight,
-  }
-})
-
+    pt: "42px",
+  },
+});
 
 const Body = styled(DrawerBody, {
   baseStyle: {
-    display: "grid",
+    pb: { md: "56px", xl: "48px" },
+    minHeight: { md: "67vh", xl: "45vh" },
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
+  },
+});
+
+const BodyGrid = styled(Grid, {
+  baseStyle: {
     justifyItems: "center",
     w: "100%",
     px: "120px",
-    gridTemplateRows: {base: "auto auto auto",lg: "90% 10%"},
-    pb: "84px",
-    
+    gridTemplateRows: { base: "auto auto", xl: "100%" },
+    gridColumnGap: "28px",
+    gridRowGap: "80px",
   },
 });
 
 const Section = styled(GridItem, {
   baseStyle: {
-    w: "90%"
+    w: "100%",
   },
 });
 
@@ -41,11 +52,13 @@ const Title = styled(Heading, {
     color: "secondary.black",
     fontSize: "28px",
     fontWeight: "200",
-    pt: "42px",
+    pt: "0",
     pb: "28px",
     borderBottom: "1px solid",
-    borderBottomColor: "secondary.gray",
+    borderBottomColor: "secondary.blueGrayish",
     mb: "28px",
+    px: "0",
+    mx: "0",
   },
 });
 
@@ -54,7 +67,7 @@ const Description = styled(Text, {
     fontSize: "19px",
     color: "primary.gray",
     lineHeight: "1.2",
-    pb: "24px"
+    pb: "24px",
   },
 });
 const Elements = styled(List, {
@@ -76,14 +89,16 @@ const ListElement = styled(ListItem, {
     bgRepeat: "no-repeat",
     bgPos: "left center",
     bgSize: "20px",
-    pl: "32px" 
+    pl: "32px",
   },
 });
 
-const BottomRow = styled(GridItem, {
+const BottomRow = styled(Flex, {
   baseStyle: {
-    gridColumn: "1 /-1",
-    alignItems: "bottom",
+    justifyContent: "center",
+    alignItems: "flex-end",
+    width: "100%",
+    pt: { md: "32px", xl: "0" },
   },
 });
 
@@ -93,21 +108,20 @@ const CTAButton = styled(Button, {
     color: "primary.blue",
     border: "1px solid",
     borderColor: "primary.blue",
-    justifySelf: "center",
     h: "72px",
     minW: "242px",
-    mt: {base: "60px", lg: "0"}
   },
 });
 
 export const MegaMenuDrawerElements = {
   Content,
-  Body,
   Section,
+  Body,
   Title,
   Description,
   Elements,
   ListElement,
   BottomRow,
   CTAButton,
+  BodyGrid,
 };
