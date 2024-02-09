@@ -16,7 +16,7 @@ import { menuHeight } from "@/theme/globals";
 const Content = styled(DrawerContent, {
   baseStyle: {
     mt: menuHeight,
-    pt: "42px",
+    pt: {md: "76px", lg: "42px"},
   },
 });
 
