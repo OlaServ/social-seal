@@ -8,14 +8,16 @@ export const colors = {
     white: "#FFFFFF",
     gray: "#727272",
     grayLight: "#BBBBBB",
+    grayDark: "#0B0B0B",
     yellow: "#FFD437",
   },
 
   secondary: {
     black: "#252541",
     blackRaisin: "#1D1D25",
-    gray: "#E5E7EC",
+    blackHeading: "#0B0B0B",
     grayLight: "#D9D9D9",
+    grayDark: "#191919",
     blue: "#3482FF",
     white: "#FEFEFE",
     whiteOverlay: "#F5F5F5",

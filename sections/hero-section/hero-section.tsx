@@ -2,12 +2,10 @@
 import { HeroSectionElements as el } from "./hero-section.elements";
 import { FlexProps, useBreakpointValue } from "@chakra-ui/react";
 import { carouselLogoUrls } from "@/data/carousel-logo-urls";
+import { useIsMobile } from "@/hooks/use-is-mobile";
 
-export const HeroSection = ({...rest} : FlexProps) => {
-  const isMobile = useBreakpointValue(
-    { base: true, sm: true, md: true, lg: false },
-    { fallback: "lg" }
-  );
+export const HeroSection = ({ ...rest }: FlexProps) => {
+  const isMobile = useIsMobile();
 
   return (
     <el.Container as="section" {...rest}>

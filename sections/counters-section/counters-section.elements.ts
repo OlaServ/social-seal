@@ -1,10 +1,9 @@
-import { Flex, Grid, styled, Text, chakra } from "@chakra-ui/react";
+import { Flex, Grid, styled, Text } from "@chakra-ui/react";
 import { Button } from "@/components/button/button";
+import { SectionGrid } from "@/components/section-grid/section-grid";
 
-const Container = styled("section", {
+const Container = styled(SectionGrid, {
   baseStyle: {
-    display: "grid",
-    w: "100%",
     pt: { base: "144px", sm: "164px", lg: "195px" },
     px: { base: "16px", sm: "84px", lg: "120px" },
     pb: { base: "80px", sm: "170px", lg: "112px" },
@@ -12,9 +11,6 @@ const Container = styled("section", {
     gridColumnGap: "40px",
     gridTemplateColumns: { base: "1fr", lg: "1fr 1fr" },
     gridTemplateRows: { base: "auto auto", lg: "auto" },
-    justifyItems: { base: "center", lg: "end" },
-    whiteSpace: "pre-wrap",
-    textAlign: { base: "center", lg: "left" },
   },
 });
 
@@ -29,7 +25,7 @@ const Subtitle = styled(Text, {
     color: "primary.yellow",
     fontSize: "20px",
     lineHeight: "1.1",
-    mb: "32px",
+    mb: { base: "20px", md: "32px" },
   },
 });
 
@@ -55,7 +51,7 @@ const ColumnRight = styled(Grid, {
   baseStyle: {
     gridTemplateColumns: { base: "250px", md: "250px 250px" },
     gridGap: "30px",
-    pr: {base: "0", md: "20px"},
+    pr: { base: "0", md: "20px" },
     mt: {
       base: "56px",
       md: "none",
@@ -79,7 +75,7 @@ const CountersColumnLeft = styled(CountersColumn, {
 const ButtonsContainer = styled(Flex, {
   baseStyle: {
     flexDirection: { base: "column", md: "row" },
-    justifyContent: {base: "center", lg: "flex-start"},
+    justifyContent: { base: "center", lg: "flex-start" },
     alignItems: "center",
     mt: { base: "16px", md: "64px" },
     px: { base: "0", md: "62px", lg: "0" },
