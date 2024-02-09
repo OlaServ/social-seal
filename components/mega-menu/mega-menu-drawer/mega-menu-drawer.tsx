@@ -5,15 +5,17 @@ import { MegaMenuSectionType } from "@/domain/mega-menu.t";
 
 interface IMegaMenuDrawerProps extends Pick<DrawerProps, "isOpen" | "onClose"> {
   sections: Array<MegaMenuSectionType>;
+  isMainMenuOpen: boolean;
 }
 
 export const MegaMenuDrawer = ({
   isOpen,
   onClose,
   sections,
+  isMainMenuOpen,
 }: IMegaMenuDrawerProps) => {
   const windowHeight = window.innerHeight;
-  const isLargeWindow = windowHeight > 1024
+  const isLargeWindow = windowHeight > 1024;
 
   return (
     <Drawer
@@ -23,7 +25,7 @@ export const MegaMenuDrawer = ({
       closeOnEsc
       placement="top"
     >
-      <el.Content>
+      <el.Content pt={{ md: isMainMenuOpen ? "100px" : "36px", lg: "76px" }}>
         <el.Body>
           <el.BodyGrid
             gridRowGap={isLargeWindow ? "80px" : "12px"}
@@ -36,9 +38,13 @@ export const MegaMenuDrawer = ({
               const { title, description, sectionElements } = section;
               return (
                 <el.Section key={title + idx}>
-                  <el.Title pb={isLargeWindow ? "28px": "12px"}>{title}</el.Title>
+                  <el.Title pb={isLargeWindow ? "28px" : "12px"}>
+                    {title}
+                  </el.Title>
                   {description && (
-                    <el.Description pb={isLargeWindow ? "24px": "12px"}>{description}</el.Description>
+                    <el.Description pb={isLargeWindow ? "24px" : "12px"}>
+                      {description}
+                    </el.Description>
                   )}
 
                   <el.Elements>

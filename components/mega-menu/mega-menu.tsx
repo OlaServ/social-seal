@@ -97,6 +97,7 @@ export const MegaMenu = ({ data, ...rest }: IMegaMenuProps) => {
           isOpen={isDrawerOpen}
           onClose={() => setIsDrawerOpen(false)}
           sections={sections}
+          isMainMenuOpen={isMobileMenuOpen}
         />
       )}
     </>
