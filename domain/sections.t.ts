@@ -10,9 +10,13 @@ export interface ICounter {
   text: string;
   backgroundUrl: string;
   colorVariant: string;
-  bgPlacement?: "left" | "right"
+  bgPlacement?: "left" | "right";
 }
 
 export interface ICountersSection extends ISection {
   counters: Array<ICounter>;
+}
+
+export interface ISwiperSection extends ISection {
+  imageUrls: Array<string>;
 }

@@ -1,16 +1,14 @@
 "use client";
-import { HeroElements as el } from "./hero.elements";
-import { useBreakpointValue } from "@chakra-ui/react";
+import { HeroSectionElements as el } from "./hero-section.elements";
+import { FlexProps, useBreakpointValue } from "@chakra-ui/react";
 import { carouselLogoUrls } from "@/data/carousel-logo-urls";
+import { useIsMobile } from "@/hooks/use-is-mobile";
 
-export const Hero = () => {
-  const isMobile = useBreakpointValue(
-    { base: true, sm: true, md: true, lg: false },
-    { fallback: "lg" }
-  );
+export const HeroSection = ({ ...rest }: FlexProps) => {
+  const isMobile = useIsMobile();
 
   return (
-    <el.Container>
+    <el.Container as="section" {...rest}>
       <el.InnerContainer>
         <el.ColumnLeft>
           <el.Tag>Social Media Marketing That Works!</el.Tag>

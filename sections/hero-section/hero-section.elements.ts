@@ -157,7 +157,7 @@ const StyledCarousel = styled(Carousel, {
   }
 })
 
-export const HeroElements = {
+export const HeroSectionElements = {
   Container,
   InnerContainer,
   ColumnLeft,

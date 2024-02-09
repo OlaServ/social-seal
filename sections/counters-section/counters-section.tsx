@@ -1,12 +1,12 @@
 "use client";
-import { CountersElements as el } from "./counters.elements";
+import { CountersSectionElements as el } from "./counters-section.elements";
 import { Counter } from "@/components/counter/counter";
 import { ICountersSection } from "@/domain/sections.t";
 import { GridProps } from "@chakra-ui/react";
 
 interface ICountersProps extends ICountersSection, GridProps {}
 
-export const Counters = ({
+export const CountersSection = ({
   sectionTitle,
   subtitle,
   body,
