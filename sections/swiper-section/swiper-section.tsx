@@ -32,9 +32,9 @@ export const SwiperSection = ({
   };
   return (
     <el.Container>
-      <el.RotatingImageOne imageUrl="/assets/images/shape-1.svg" />
+      <el.RotatingImageOne imageUrl="/assets/images/shapes/shape-1.svg" />
       {!isMobile && (
-        <el.RotatingImageTwo imageUrl="/assets/images/shape-2.svg" />
+        <el.RotatingImageTwo imageUrl="/assets/images/shapes/shape-2.svg" />
       )}
       <SectionContent {...sectionData} />
       <Swiper

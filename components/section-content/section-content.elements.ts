@@ -1,5 +1,4 @@
 import { styled, Flex, Text } from "@chakra-ui/react";
-import { Button } from "../button/button";
 
 const Container = styled(Flex, {
   baseStyle: {
@@ -13,6 +12,7 @@ const Subtitle = styled(Text, {
     fontSize: "20px",
     lineHeight: "1.1",
     mb: { base: "20px", md: "32px" },
+    mt: {base: "60px", lg: "0"}
   },
 });
 
@@ -23,6 +23,11 @@ const Title = styled(Text, {
     lineHeight: "1.2",
     fontWeight: 700,
     mb: "26px",
+    px: {
+      base: "42px",
+      md: "110px",
+      lg: "0",
+    },
   },
 });
 
@@ -32,8 +37,9 @@ const Body = styled(Text, {
     lineHeight: "32px",
     fontWeight: 300,
     color: "primary.gray",
-    whiteSpace: "normal",
+    whiteSpace: "pre-line",
     mb: { base: "36px", lg: "32px" },
+    px: { base: "0", md: "16px", lg: "0" },
   },
 });
 

@@ -15,7 +15,7 @@ export const SectionContent = ({
   onClickSectionButton,
   ...rest
 }: ISectionContentProps) => {
-  const parsedText = TextParser.renderUnderlinedText(sectionBody);
+  const parsedText = TextParser.renderFormattedText(sectionBody);
   const isMobile = useIsMobile();
 
   return (
