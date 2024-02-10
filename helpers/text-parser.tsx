@@ -1,14 +1,14 @@
-"use client"
+"use client";
 import { Text } from "@chakra-ui/react";
 import uniqid from "uniqid";
 
 export class TextParser {
-  static renderUnderlinedText(inputString: string) {
+  static renderFormattedText(inputString: string) {
     const splitString = inputString.split(/<u>|<\/u>/);
     const modifiedString = splitString
       .map((segment, index) => {
         if (index % 2 === 0) {
-          return segment
+          return segment;
         } else {
           return (
             <Text
@@ -22,8 +22,7 @@ export class TextParser {
           );
         }
       })
-      .filter(Boolean)
-     
+      .filter(Boolean);
 
     return modifiedString;
   }

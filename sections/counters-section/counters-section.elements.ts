@@ -42,7 +42,7 @@ const Title = styled(Text, {
 const Body = styled(Text, {
   baseStyle: {
     color: "primary.grayLight",
-    fonrSize: "18px",
+    fontSize: "18px",
     lineHeight: "1.8",
   },
 });

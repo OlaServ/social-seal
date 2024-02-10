@@ -1,7 +1,12 @@
 export interface ISection {
-  subtitle: string;
+  sectionSubtitle: string;
   sectionTitle: string;
-  body: string;
+  sectionBody: string;
+}
+
+export interface ISectionWithButton extends ISection {
+  sectionButtonText: string;
+  onClickSectionButton?: () => void;
 }
 
 export interface ICounter {
@@ -13,10 +18,12 @@ export interface ICounter {
   bgPlacement?: "left" | "right";
 }
 
-export interface ICountersSection extends ISection {
+export interface ICountersSection {
+  sectionData: ISection,
   counters: Array<ICounter>;
 }
 
-export interface ISwiperSection extends ISection {
+export interface ISwiperSection {
+  sectionData: ISectionWithButton;
   imageUrls: Array<string>;
 }
