@@ -8,7 +8,6 @@ const Container = styled(SectionGrid, {
     px: { base: "16px", sm: "84px", lg: "120px" },
     pb: { base: "80px", sm: "170px", lg: "112px" },
     bg: "primary.blueDark",
-    gridColumnGap: "40px",
     gridTemplateColumns: { base: "1fr", lg: "1fr 1fr" },
     gridTemplateRows: { base: "auto auto", lg: "auto" },
   },
@@ -51,6 +50,7 @@ const ColumnRight = styled(Grid, {
   baseStyle: {
     gridTemplateColumns: { base: "250px", md: "250px 250px" },
     gridGap: "30px",
+    justifyContent: "center",
     pr: { base: "0", md: "20px" },
     mt: {
       base: "56px",

@@ -1,31 +1,28 @@
 "use client";
+import { useContext } from "react";
+import { MobileContext } from "@/context/mobile-context";
 import { GridProps } from "@chakra-ui/react";
 import { InboxManagementSectionElements as el } from "./inbox-management-section.elements";
 import { SectionContent } from "@/components/section-content/section-content";
 import { ISectionWithButton } from "@/domain/sections.t";
-import { useIsMobile } from "@/hooks/use-is-mobile";
+import { SectionContentButton } from "@/components/section-content-button/section-content-button";
 
-interface IInboxManagementSectionProps extends GridProps, ISectionWithButton {}
+interface IInboxManagementSectionProps extends GridProps {
+  sectionData: ISectionWithButton;
+}
 
 export const InboxManagementSection = ({
-  sectionTitle,
-  sectionSubtitle,
-  sectionBody,
-  sectionButtonText,
+  sectionData,
+  ...rest
 }: IInboxManagementSectionProps) => {
-  const isMobile = useIsMobile();
+  const { isMobile } = useContext(MobileContext);
   return (
-    <el.Container>
+    <el.Container {...rest}>
       <el.StyledImage
         src="/assets/images/phone.png"
         alt="A cellphone with an instant messenger app on the screen and icons floating around"
       />
-      <SectionContent
-        sectionTitle={sectionTitle}
-        sectionSubtitle={sectionSubtitle}
-        sectionButtonText={sectionButtonText}
-        sectionBody={sectionBody}
-      />
+      <SectionContent {...sectionData} />
       {!isMobile && (
         <>
           <el.RotatingImage imageUrl="/assets/images/shapes/shape-3.svg" />
@@ -34,6 +31,11 @@ export const InboxManagementSection = ({
             animationVariant="float"
           />
         </>
+      )}
+      {isMobile && (
+        <SectionContentButton>
+          {sectionData.sectionButtonText}
+        </SectionContentButton>
       )}
     </el.Container>
   );

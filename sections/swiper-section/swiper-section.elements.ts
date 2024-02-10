@@ -2,13 +2,14 @@ import { styled, Text, Flex } from "@chakra-ui/react";
 import { SectionGrid } from "@/components/section-grid/section-grid";
 import { AnimatedShape } from "@/components/animated-shape/animated-shape";
 import { Button } from "@/components/button/button";
+import { SectionContent } from "@/components/section-content/section-content";
 
 const Container = styled(SectionGrid, {
   baseStyle: {
     pt: { base: "80px", sm: "112px", lg: "112px" },
     pl: { base: "16px", sm: "24px", lg: "120px" },
     pr: { base: "16px", sm: "24px", lg: "0" },
-    gridTemplateColumns: { base: "1fr", lg: "0.33fr 0.68fr" },
+    gridTemplateColumns: { base: "1fr", lg: "0.54fr 1fr" },
     gridTemplateRows: { base: "auto auto", lg: "auto" },
     position: "relative",
     justifyItems: "baseline",
@@ -82,6 +83,14 @@ const ViewMoreButton = styled(Button, {
   },
 });
 
+const StyledContent = styled(SectionContent, {
+  baseStyle: {
+    mb: { base: "36px", lg: "0" },
+    alignSelf: "center"
+
+  },
+});
+
 export const SwiperSectionElements = {
   Container,
   ColumnLeft,
@@ -91,4 +100,5 @@ export const SwiperSectionElements = {
   RotatingImageOne,
   RotatingImageTwo,
   ViewMoreButton,
+  StyledContent,
 };

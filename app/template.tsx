@@ -1,16 +1,13 @@
 "use client";
 
 import ThemeProvider from "@/theme/theme-provider";
-import { MegaMenu } from "@/components/mega-menu/mega-menu";
 import { ReactNode } from "react";
-import { MegaMenuData } from "@/data/mega-menu";
+import { RootTemplate } from "@/components/root-template/root-template";
 
 const RouteLayout = ({ children }: { children: ReactNode }) => {
   return (
     <ThemeProvider>
-      <MegaMenu data={MegaMenuData} />
-
-      {children}
+      <RootTemplate>{children}</RootTemplate>
     </ThemeProvider>
   );
 };

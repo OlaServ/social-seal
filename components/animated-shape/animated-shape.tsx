@@ -61,6 +61,10 @@ export const AnimatedShape = ({
       repeat: Infinity,
       repeatType: "reverse",
     },
+    style: {
+      position: "absolute",
+      zIndex: -1,
+    },
   } as MotionProps;
 
   return <motion.img src={imageUrl} {...imageAnimationProps} {...rest} />;
