@@ -7,21 +7,20 @@ import { GridProps } from "@chakra-ui/react";
 interface ICountersProps extends ICountersSection, GridProps {}
 
 export const CountersSection = ({
-  sectionTitle,
-  subtitle,
-  body,
+  sectionData,
   counters,
   ...rest
 }: ICountersProps) => {
+  const { sectionTitle, sectionSubtitle, sectionBody } = sectionData;
   return (
     <el.Container {...rest}>
       <el.ColumnLeft>
-        <el.Subtitle>{subtitle}</el.Subtitle>
+        <el.Subtitle>{sectionSubtitle}</el.Subtitle>
         <el.Title as="h2">{sectionTitle}</el.Title>
-        <el.Body>{body}</el.Body>
+        <el.Body>{sectionBody}</el.Body>
         <el.ButtonsContainer>
-            <el.ContactButton size="large">Contact Us</el.ContactButton>
-            <el.HelpButton size="large">How Can We Help</el.HelpButton>
+          <el.ContactButton size="large">Contact Us</el.ContactButton>
+          <el.HelpButton size="large">How Can We Help</el.HelpButton>
         </el.ButtonsContainer>
       </el.ColumnLeft>
       <el.ColumnRight>

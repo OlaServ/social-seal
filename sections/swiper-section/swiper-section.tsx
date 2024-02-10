@@ -6,16 +6,14 @@ import { TextParser } from "@/helpers/text-parser";
 import { useIsMobile } from "@/hooks/use-is-mobile";
 import { Swiper } from "@/components/swiper/swiper";
 import { ISwiperSection } from "@/domain/sections.t";
+import { SectionContent } from "@/components/section-content/section-content";
 
 interface ISwiperSectionProps extends GridProps, ISwiperSection {}
 
 export const SwiperSection = ({
-  sectionTitle,
-  body,
-  subtitle,
   imageUrls,
+  sectionData,
 }: ISwiperSectionProps) => {
-  const parsedText = TextParser.renderUnderlinedText(body);
   const isMobile = useIsMobile();
 
   const swiperBreakpointValues = {
@@ -38,21 +36,16 @@ export const SwiperSection = ({
       {!isMobile && (
         <el.RotatingImageTwo imageUrl="/assets/images/shape-2.svg" />
       )}
-      <el.ColumnLeft>
-        <el.Subtitle>{subtitle}</el.Subtitle>
-        <el.Title as="h2">{sectionTitle}</el.Title>
-        <el.Body>{...parsedText}</el.Body>
-        {!isMobile && (
-          <el.ViewMoreButton size="large">View More</el.ViewMoreButton>
-        )}
-      </el.ColumnLeft>
+      <SectionContent {...sectionData} />
       <Swiper
         slidesPerView={3}
         breakpoints={swiperBreakpointValues}
         imageUrls={imageUrls}
       />
       {isMobile && (
-        <el.ViewMoreButton size="large">View More</el.ViewMoreButton>
+        <el.ViewMoreButton size="large">
+          {sectionData.sectionButtonText}
+        </el.ViewMoreButton>
       )}
     </el.Container>
   );
