@@ -24,7 +24,7 @@ const Title = styled(Text, {
     fontWeight: 700,
     mb: "26px",
     px: {
-      base: "42px",
+      base: "32px",
       md: "110px",
       lg: "0",
     },
@@ -38,7 +38,7 @@ const Body = styled(Text, {
     fontWeight: 300,
     color: "primary.gray",
     whiteSpace: "pre-line",
-    mb: { base: "36px", lg: "32px" },
+    mb: { base: "0", lg: "32px" },
     px: { base: "0", md: "16px", lg: "0" },
   },
 });

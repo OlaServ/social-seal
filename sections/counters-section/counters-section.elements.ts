@@ -8,7 +8,6 @@ const Container = styled(SectionGrid, {
     px: { base: "16px", sm: "84px", lg: "120px" },
     pb: { base: "80px", sm: "170px", lg: "112px" },
     bg: "primary.blueDark",
-    gridColumnGap: "40px",
     gridTemplateColumns: { base: "1fr", lg: "1fr 1fr" },
     gridTemplateRows: { base: "auto auto", lg: "auto" },
   },

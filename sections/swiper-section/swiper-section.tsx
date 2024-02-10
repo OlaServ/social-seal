@@ -1,9 +1,9 @@
 "use client";
 
+import { useContext } from "react";
+import { MobileContext } from "@/context/mobile-context";
 import { GridProps } from "@chakra-ui/react";
 import { SwiperSectionElements as el } from "./swiper-section.elements";
-import { TextParser } from "@/helpers/text-parser";
-import { useIsMobile } from "@/hooks/use-is-mobile";
 import { Swiper } from "@/components/swiper/swiper";
 import { ISwiperSection } from "@/domain/sections.t";
 import { SectionContent } from "@/components/section-content/section-content";
@@ -14,7 +14,7 @@ export const SwiperSection = ({
   imageUrls,
   sectionData,
 }: ISwiperSectionProps) => {
-  const isMobile = useIsMobile();
+  const { isMobile } = useContext(MobileContext);
 
   const swiperBreakpointValues = {
     0: {
@@ -36,7 +36,7 @@ export const SwiperSection = ({
       {!isMobile && (
         <el.RotatingImageTwo imageUrl="/assets/images/shapes/shape-2.svg" />
       )}
-      <SectionContent {...sectionData} />
+      <el.StyledContent {...sectionData} />
       <Swiper
         slidesPerView={3}
         breakpoints={swiperBreakpointValues}

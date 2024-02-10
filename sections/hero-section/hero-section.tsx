@@ -1,12 +1,12 @@
 "use client";
+import { useContext } from "react";
+import { MobileContext } from "@/context/mobile-context";
 import { HeroSectionElements as el } from "./hero-section.elements";
-import { FlexProps, useBreakpointValue } from "@chakra-ui/react";
+import { FlexProps } from "@chakra-ui/react";
 import { carouselLogoUrls } from "@/data/carousel-logo-urls";
-import { useIsMobile } from "@/hooks/use-is-mobile";
 
 export const HeroSection = ({ ...rest }: FlexProps) => {
-  const isMobile = useIsMobile();
-
+  const { isMobile } = useContext(MobileContext);
   return (
     <el.Container as="section" {...rest}>
       <el.InnerContainer>
