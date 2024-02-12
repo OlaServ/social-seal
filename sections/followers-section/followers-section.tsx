@@ -3,11 +3,11 @@ import { useContext } from "react";
 import { MobileContext } from "@/context/mobile-context";
 import { GridProps } from "@chakra-ui/react";
 import { FollowersSectionElements as el } from "./followers-section.elements";
-import { ISectionWithButton } from "@/domain/sections.t";
+import { ISectionWithButtons } from "@/domain/sections.t";
 import { SectionContentButton } from "@/components/section-content-button/section-content-button";
 
 interface IFollowersSectionProps extends GridProps {
-  sectionData: ISectionWithButton;
+  sectionData: ISectionWithButtons;
 }
 
 export const FollowersSection = ({

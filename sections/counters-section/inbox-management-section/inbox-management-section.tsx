@@ -33,9 +33,9 @@ export const InboxManagementSection = ({
         </>
       )}
       {isMobile && (
-        <SectionContentButton>
+        <el.StyledButton>
           {sectionData.sectionButtonOneText}
-        </SectionContentButton>
+        </el.StyledButton>
       )}
     </el.Container>
   );

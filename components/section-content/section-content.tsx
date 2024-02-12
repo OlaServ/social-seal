@@ -5,6 +5,7 @@ import { SectionContentElements as el } from "./section-content.elements";
 import { ISectionWithButtons } from "@/domain/sections.t";
 import { TextParser } from "@/helpers/text-parser";
 import { SectionContentButton } from "../section-content-button/section-content-button";
+import { Pills } from "../pills/pills";
 
 interface ISectionContentProps extends ISectionWithButtons, FlexProps {
   showButtonOnMobile?: boolean;
@@ -16,6 +17,7 @@ export const SectionContent = ({
   sectionSubtitle,
   sectionButtonOneText,
   onClickSectionButton,
+  pills,
   showButtonOnMobile = false,
   children,
   ...rest
@@ -28,10 +30,13 @@ export const SectionContent = ({
       <el.Subtitle>{sectionSubtitle}</el.Subtitle>
       <el.Title as="h2">{sectionTitle}</el.Title>
       <el.Body>{...parsedText}</el.Body>
+      {pills && <Pills {...pills}/>}
       {(!isMobile || showButtonOnMobile) && (
-        <SectionContentButton size="large" onClick={onClickSectionButton}>
-          {sectionButtonOneText}
-        </SectionContentButton>
+           <el.ButtonsContainer>
+           <SectionContentButton size="large" onClick={onClickSectionButton}>
+            {sectionButtonOneText}
+          </SectionContentButton>
+         </el.ButtonsContainer>
       )}
     </el.Container>
   );

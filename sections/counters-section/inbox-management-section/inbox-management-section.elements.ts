@@ -1,6 +1,7 @@
 import { styled, Image } from "@chakra-ui/react";
 import { SectionGrid } from "@/components/section-grid/section-grid";
 import { AnimatedShape } from "@/components/animated-shape/animated-shape";
+import { SectionContentButton } from "@/components/section-content-button/section-content-button";
 
 const Container = styled(SectionGrid, {
   baseStyle: {
@@ -41,9 +42,17 @@ const RotatingImage = styled(AnimatedShape, {
   },
 });
 
+const StyledButton = styled(SectionContentButton, {
+  baseStyle: {
+    mt: { base: "26px", md: "56px", lg: "0" },
+  },
+});
+
+
 export const InboxManagementSectionElements = {
   Container,
   StyledImage,
   FloatingImage,
   RotatingImage,
+  StyledButton
 };

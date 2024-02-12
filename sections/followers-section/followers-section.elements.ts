@@ -2,6 +2,7 @@ import { Image, styled } from "@chakra-ui/react";
 import { SectionGrid } from "@/components/section-grid/section-grid";
 import { SectionContent } from "@/components/section-content/section-content";
 import { AnimatedShape } from "@/components/animated-shape/animated-shape";
+import { SectionContentButton } from "@/components/section-content-button/section-content-button";
 
 const Container = styled(SectionGrid, {
   baseStyle: {

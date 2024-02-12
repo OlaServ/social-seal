@@ -12,7 +12,7 @@ const Subtitle = styled(Text, {
     fontSize: "20px",
     lineHeight: "1.1",
     mb: { base: "20px", md: "32px" },
-    mt: {base: "60px", lg: "0"}
+    mt: { base: "60px", lg: "0" },
   },
 });
 
@@ -43,9 +43,18 @@ const Body = styled(Text, {
   },
 });
 
+const ButtonsContainer = styled(Flex, {
+  baseStyle: {
+    width: "100%",
+    justifyContent: { base: "center", lg: "space-between" },
+    mt: { base: "26px", md: "56px", lg: "0" },
+  },
+});
+
 export const SectionContentElements = {
   Container,
   Subtitle,
   Title,
   Body,
+  ButtonsContainer,
 };

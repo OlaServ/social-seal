@@ -32,7 +32,7 @@ export const ThreatMonitoringSection = ({
           />
         )}
       </el.LeftColumn>
-      <SectionContent {...sectionData} />
+      <SectionContent showButtonOnMobile {...sectionData} />
       <el.StyledFlyingIcon
         imageUrl="/assets/images/troll.svg"
         variant="forward"

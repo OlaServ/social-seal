@@ -16,6 +16,8 @@ const Container = styled(SectionGrid, {
     position: "relative",
     justifyItems: "start",
     alignItems: "center",
+    overflowX: "clip",
+
   },
 });
 

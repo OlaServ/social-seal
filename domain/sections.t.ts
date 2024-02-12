@@ -1,14 +1,9 @@
+import { IPills } from "./pills";
 export interface ISection {
   sectionSubtitle: string;
   sectionTitle: string;
   sectionBody: string;
-  pills?: {
-    title: string;
-    pillsList: Array<{
-      text: string;
-      colorVariant: "orange" | "yellow" | "blue" | "red";
-    }>;
-  };
+  pills?: IPills;
 }
 
 export interface ISectionWithButtons extends ISection {
