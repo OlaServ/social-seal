@@ -6,7 +6,7 @@ import { AnimatedShape } from "@/components/animated-shape/animated-shape";
 const Container = styled(SectionGrid, {
   baseStyle: {
     px: { base: "16px", sm: "84px", lg: "120px" },
-    pb: { base: "80px", sm: "170px", lg: "112px" },
+    pb: { base: "0", sm: "0px", lg: "182px" },
     position: "relative",
     gridTemplateColumns: { base: "1fr", lg: "1.02fr 1fr" },
     gridTemplateRows: { base: "auto auto", lg: "auto" },
@@ -38,7 +38,7 @@ const RotatingImage = styled(AnimatedShape, {
 const FloatingImage = styled(AnimatedShape, {
   baseStyle: {
     left: "32vw",
-    bottom: "112px",
+    bottom: "182px",
   },
 });
 

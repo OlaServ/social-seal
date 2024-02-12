@@ -2,11 +2,20 @@ export interface ISection {
   sectionSubtitle: string;
   sectionTitle: string;
   sectionBody: string;
+  pills?: {
+    title: string;
+    pillsList: Array<{
+      text: string;
+      colorVariant: "orange" | "yellow" | "blue" | "red";
+    }>;
+  };
 }
 
-export interface ISectionWithButton extends ISection {
-  sectionButtonText: string;
+export interface ISectionWithButtons extends ISection {
+  sectionButtonOneText: string;
   onClickSectionButton?: () => void;
+  sectionButtonTwoText?: string;
+  onClickSectionButtonTwo?: () => void;
 }
 
 export interface ICounter {
@@ -19,11 +28,11 @@ export interface ICounter {
 }
 
 export interface ICountersSection {
-  sectionData: ISection,
+  sectionData: ISection;
   counters: Array<ICounter>;
 }
 
 export interface ISwiperSection {
-  sectionData: ISectionWithButton;
+  sectionData: ISectionWithButtons;
   imageUrls: Array<string>;
 }

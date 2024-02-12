@@ -4,11 +4,11 @@ import { MobileContext } from "@/context/mobile-context";
 import { GridProps } from "@chakra-ui/react";
 import { InboxManagementSectionElements as el } from "./inbox-management-section.elements";
 import { SectionContent } from "@/components/section-content/section-content";
-import { ISectionWithButton } from "@/domain/sections.t";
+import { ISectionWithButtons } from "@/domain/sections.t";
 import { SectionContentButton } from "@/components/section-content-button/section-content-button";
 
 interface IInboxManagementSectionProps extends GridProps {
-  sectionData: ISectionWithButton;
+  sectionData: ISectionWithButtons;
 }
 
 export const InboxManagementSection = ({
@@ -34,7 +34,7 @@ export const InboxManagementSection = ({
       )}
       {isMobile && (
         <SectionContentButton>
-          {sectionData.sectionButtonText}
+          {sectionData.sectionButtonOneText}
         </SectionContentButton>
       )}
     </el.Container>
