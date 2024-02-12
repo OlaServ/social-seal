@@ -1,4 +1,5 @@
 import { IPills } from "./pills";
+
 export interface ISection {
   sectionSubtitle: string;
   sectionTitle: string;
@@ -12,7 +13,6 @@ export interface ISectionWithButtons extends ISection {
   };
   sectionButtonTwo?: {
     sectionButtonTwoText: string;
-
   };
 }
 

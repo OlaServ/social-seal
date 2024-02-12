@@ -29,8 +29,8 @@ export const SectionContent = ({
 
   return (
     <el.Container {...rest}>
-      <el.Subtitle>{sectionSubtitle}</el.Subtitle>
-      <el.Title as="h2">{sectionTitle}</el.Title>
+      <el.Subtitle variant="subtitle">{sectionSubtitle}</el.Subtitle>
+      <el.Title>{sectionTitle}</el.Title>
       <el.Body>{...parsedText}</el.Body>
       {pills && <Pills {...pills} />}
       {(!isMobile || showButtonOnMobile) && (

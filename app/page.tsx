@@ -9,6 +9,7 @@ import { FollowersSection } from "@/sections/followers-section/followers-section
 import { FollowersSectionData } from "@/data/followers-section";
 import { ThreatMonitoringSection } from "@/sections/threat-monitoring-section/threat-monitoring-section";
 import { ThreatMonitoringSectionData } from "@/data/threat-monitoring-section";
+import { BrandSection } from "@/sections/brand-section/brand-section";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <InboxManagementSection sectionData={InboxManagementSectionData} />
       <FollowersSection sectionData={FollowersSectionData} />
       <ThreatMonitoringSection sectionData={ThreatMonitoringSectionData} />
+      <BrandSection />
     </main>
   );
 }
