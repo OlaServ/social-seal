@@ -1,24 +1,30 @@
-import { FlexProps, StyleProps } from "@chakra-ui/react";
+import { StyleProps } from "@chakra-ui/react";
 import { SwiperElements as el } from "./swiper.elements";
 import { SwiperSlide, SwiperProps } from "swiper/react";
 import { Autoplay, Grid } from "swiper/modules";
+import uniqid from "uniqid";
 
 import "swiper/css";
 import "swiper/css/navigation";
-import "swiper/css/grid"
+import "swiper/css/grid";
 
 interface ISwiperProps
   extends Omit<StyleProps, "grid">,
     Omit<SwiperProps, "color" | "height" | "width"> {
   imageUrls: Array<string>;
+  autoplayDelay?: number;
 }
 
-export const Swiper = ({ imageUrls, ...rest }: ISwiperProps) => {
+export const Swiper = ({
+  imageUrls,
+  autoplayDelay = 5000,
+  ...rest
+}: ISwiperProps) => {
   return (
     <el.Container
       spaceBetween={30}
       autoplay={{
-        delay: 5000,
+        delay: autoplayDelay,
         disableOnInteraction: false,
       }}
       pagination={false}
@@ -29,7 +35,7 @@ export const Swiper = ({ imageUrls, ...rest }: ISwiperProps) => {
     >
       {imageUrls.map((imageUrl) => {
         return (
-          <SwiperSlide key={imageUrl}>
+          <SwiperSlide key={uniqid()}>
             <el.SlideImage src={imageUrl} alt="" />
           </SwiperSlide>
         );

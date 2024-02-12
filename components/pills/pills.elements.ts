@@ -1,5 +1,5 @@
 import { styled, Flex, FlexProps, Text } from "@chakra-ui/react";
-import { PillColorVariantType } from "@/domain/pills";
+import { PillColorVariantType } from "@/domain/pills.t";
 
 type PillColorVariantObject = {
   [Key in PillColorVariantType]: FlexProps;

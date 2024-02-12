@@ -1,4 +1,5 @@
-import { IPills } from "./pills";
+import { IPills } from "./pills.t";
+
 export interface ISection {
   sectionSubtitle: string;
   sectionTitle: string;
@@ -12,7 +13,6 @@ export interface ISectionWithButtons extends ISection {
   };
   sectionButtonTwo?: {
     sectionButtonTwoText: string;
-
   };
 }
 
@@ -33,4 +33,10 @@ export interface ICountersSection {
 export interface ISwiperSection {
   sectionData: ISectionWithButtons;
   imageUrls: Array<string>;
+}
+
+export interface IBrandSection {
+  sectionData: Omit<ISectionWithButtons, "sectionBody">;
+  swipers: Array<Array<string>>;
+  bottomText: string;
 }

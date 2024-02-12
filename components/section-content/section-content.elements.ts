@@ -1,6 +1,7 @@
 import { styled, Flex, Text } from "@chakra-ui/react";
 import { SectionContentButton } from "../section-content-button/section-content-button";
 import { AnimatedShape } from "../animated-shape/animated-shape";
+import { SectionTitle } from "../section-title/section-title";
 
 const Container = styled(Flex, {
   baseStyle: {
@@ -8,22 +9,17 @@ const Container = styled(Flex, {
   },
 });
 
-const Subtitle = styled(Text, {
+const Subtitle = styled(SectionTitle, {
   baseStyle: {
     color: "primary.orange",
-    fontSize: "20px",
-    lineHeight: "1.1",
     mb: { base: "20px", md: "32px" },
     mt: { base: "60px", lg: "0" },
   },
 });
 
-const Title = styled(Text, {
+const Title = styled(SectionTitle, {
   baseStyle: {
     color: "primary.grayDark",
-    fontSize: { base: "32px", md: "48px", lg: "50px" },
-    lineHeight: "1.2",
-    fontWeight: 700,
     mb: "26px",
     px: {
       base: "32px",

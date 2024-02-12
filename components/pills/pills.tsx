@@ -1,5 +1,5 @@
 import { FlexProps } from "@chakra-ui/react";
-import { IPills } from "@/domain/pills";
+import { IPills } from "@/domain/pills.t";
 import { PillsElements as el, pillColorVariants } from "./pills.elements";
 import uniqid from "uniqid";
 

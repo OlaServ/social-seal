@@ -1,6 +1,5 @@
 import { styled, Image, Flex } from "@chakra-ui/react";
 import { SectionGrid } from "@/components/section-grid/section-grid";
-import { AnimatedShape } from "@/components/animated-shape/animated-shape";
 import { ScrollAnimatedImage } from "@/components/scroll-animated-image/scroll-animated-image";
 import { FlyingIcon } from "@/components/flying-icon/flying-icon";
 
@@ -17,7 +16,6 @@ const Container = styled(SectionGrid, {
     justifyItems: "start",
     alignItems: "center",
     overflowX: "clip",
-
   },
 });
 
@@ -40,13 +38,11 @@ const LeftColumn = styled(Flex, {
   w: "100%",
   h: "100%",
   position: "relative",
-  bg: "red",
 });
 
 const ExclamationMark = styled(ScrollAnimatedImage, {
   baseStyle: {
     left: "25%",
-    transform: "translateY(50%)"
   },
 });
 
