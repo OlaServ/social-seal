@@ -1,12 +1,19 @@
+import { IPills } from "./pills";
 export interface ISection {
   sectionSubtitle: string;
   sectionTitle: string;
   sectionBody: string;
+  pills?: IPills;
 }
 
-export interface ISectionWithButton extends ISection {
-  sectionButtonText: string;
-  onClickSectionButton?: () => void;
+export interface ISectionWithButtons extends ISection {
+  sectionButtonOne: {
+    sectionButtonOneText: string;
+  };
+  sectionButtonTwo?: {
+    sectionButtonTwoText: string;
+
+  };
 }
 
 export interface ICounter {
@@ -19,11 +26,11 @@ export interface ICounter {
 }
 
 export interface ICountersSection {
-  sectionData: ISection,
+  sectionData: ISection;
   counters: Array<ICounter>;
 }
 
 export interface ISwiperSection {
-  sectionData: ISectionWithButton;
+  sectionData: ISectionWithButtons;
   imageUrls: Array<string>;
 }

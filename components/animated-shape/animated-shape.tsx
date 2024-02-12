@@ -6,11 +6,13 @@ interface IAnimatedShapeProps extends MotionProps {
   imageUrl: string;
   animationVariant?: AnimationVariantType;
   animationDuration?: number;
+  animationRepeatType?: "loop" | "reverse" | "mirror";
 }
 export const AnimatedShape = ({
   imageUrl,
   animationVariant = "rotate",
   animationDuration = 2.5,
+  animationRepeatType = "reverse",
   ...rest
 }: IAnimatedShapeProps) => {
   const rotateAnimationVariants = {
@@ -59,7 +61,7 @@ export const AnimatedShape = ({
       duration: animationDuration,
       ease: "linear",
       repeat: Infinity,
-      repeatType: "reverse",
+      repeatType: animationRepeatType,
     },
     style: {
       position: "absolute",

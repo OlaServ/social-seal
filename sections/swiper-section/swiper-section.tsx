@@ -6,7 +6,6 @@ import { GridProps } from "@chakra-ui/react";
 import { SwiperSectionElements as el } from "./swiper-section.elements";
 import { Swiper } from "@/components/swiper/swiper";
 import { ISwiperSection } from "@/domain/sections.t";
-import { SectionContent } from "@/components/section-content/section-content";
 
 interface ISwiperSectionProps extends GridProps, ISwiperSection {}
 
@@ -44,7 +43,7 @@ export const SwiperSection = ({
       />
       {isMobile && (
         <el.ViewMoreButton size="large">
-          {sectionData.sectionButtonText}
+          {sectionData.sectionButtonOne.sectionButtonOneText}
         </el.ViewMoreButton>
       )}
     </el.Container>

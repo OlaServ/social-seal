@@ -5,7 +5,6 @@ const StyledButton = styled(Button, {
   baseStyle: {
     bg: "primary.blue",
     color: "primary.white",
-    mt: { base: "26px", md: "56px", lg: "0" },
     justifySelf: { base: "center", lg: "flex-start" },
     alignSelf: { base: "center", lg: "flex-start" },
   },

@@ -7,6 +7,8 @@ import { InboxManagementSection } from "@/sections/counters-section/inbox-manage
 import { InboxManagementSectionData } from "@/data/inbox-management-section";
 import { FollowersSection } from "@/sections/followers-section/followers-section";
 import { FollowersSectionData } from "@/data/followers-section";
+import { ThreatMonitoringSection } from "@/sections/threat-monitoring-section/threat-monitoring-section";
+import { ThreatMonitoringSectionData } from "@/data/threat-monitoring-section";
 
 export default function Home() {
   return (
@@ -16,6 +18,7 @@ export default function Home() {
       <SwiperSection {...SwiperSectionData} />
       <InboxManagementSection sectionData={InboxManagementSectionData} />
       <FollowersSection sectionData={FollowersSectionData} />
+      <ThreatMonitoringSection sectionData={ThreatMonitoringSectionData} />
     </main>
   );
 }
