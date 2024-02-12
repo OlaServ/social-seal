@@ -9,6 +9,7 @@ import { Pills } from "../pills/pills";
 
 interface ISectionContentProps extends ISectionWithButtons, FlexProps {
   showButtonOnMobile?: boolean;
+  showButtonArrow?: boolean;
 }
 
 export const SectionContent = ({
@@ -19,6 +20,7 @@ export const SectionContent = ({
   sectionButtonTwo,
   pills,
   showButtonOnMobile = false,
+  showButtonArrow = false,
   children,
   ...rest
 }: ISectionContentProps) => {
@@ -41,6 +43,10 @@ export const SectionContent = ({
               {sectionButtonTwo.sectionButtonTwoText}
             </el.StyledSectionButton>
           )}
+            {!isMobile && showButtonArrow && <el.FloatingImage
+            imageUrl="/assets/images/shapes/shape-4.svg"
+            animationVariant="float"
+          />}
         </el.ButtonsContainer>
       )}
     </el.Container>

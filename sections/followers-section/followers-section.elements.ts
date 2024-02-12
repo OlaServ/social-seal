@@ -36,17 +36,9 @@ const RotatingImage = styled(AnimatedShape, {
   },
 });
 
-const FloatingImage = styled(AnimatedShape, {
-  baseStyle: {
-    left: "32vw",
-    bottom: "182px",
-  },
-});
-
 export const FollowersSectionElements = {
   Container,
   StyledContent,
   StyledImage,
   RotatingImage,
-  FloatingImage,
 };

@@ -26,13 +26,6 @@ const StyledImage = styled(Image, {
   },
 });
 
-const FloatingImage = styled(AnimatedShape, {
-  baseStyle: {
-    right: "11.9vw",
-    bottom: "166px",
-  },
-});
-
 const RotatingImage = styled(AnimatedShape, {
   baseStyle: {
     position: "absolute",
@@ -48,11 +41,9 @@ const StyledButton = styled(SectionContentButton, {
   },
 });
 
-
 export const InboxManagementSectionElements = {
   Container,
   StyledImage,
-  FloatingImage,
   RotatingImage,
-  StyledButton
+  StyledButton,
 };

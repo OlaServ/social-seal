@@ -21,15 +21,9 @@ export const InboxManagementSection = ({
         src="/assets/images/phone.png"
         alt="A cellphone with an instant messenger app on the screen and icons floating around"
       />
-      <SectionContent {...sectionData} />
+      <SectionContent showButtonArrow {...sectionData} />
       {!isMobile && (
-        <>
-          <el.RotatingImage imageUrl="/assets/images/shapes/shape-3.svg" />
-          <el.FloatingImage
-            imageUrl="/assets/images/shapes/shape-4.svg"
-            animationVariant="float"
-          />
-        </>
+        <el.RotatingImage imageUrl="/assets/images/shapes/shape-3.svg" />
       )}
       {isMobile && (
         <el.StyledButton>

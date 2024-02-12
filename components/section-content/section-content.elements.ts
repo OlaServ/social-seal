@@ -1,5 +1,6 @@
 import { styled, Flex, Text } from "@chakra-ui/react";
 import { SectionContentButton } from "../section-content-button/section-content-button";
+import { AnimatedShape } from "../animated-shape/animated-shape";
 
 const Container = styled(Flex, {
   baseStyle: {
@@ -46,9 +47,10 @@ const Body = styled(Text, {
 
 const ButtonsContainer = styled(Flex, {
   baseStyle: {
-    width: "100%",
     justifyContent: { base: "center", lg: "flex-start" },
     mt: { base: "26px", md: "56px", lg: "0" },
+    position: "relative",
+    w: "max-content"
   },
 });
 
@@ -59,6 +61,13 @@ const StyledSectionButton = styled(SectionContentButton, {
   },
 });
 
+const FloatingImage = styled(AnimatedShape, {
+  baseStyle: {
+    right: "-156px",
+    bottom: "-50%",
+  },
+});
+
 export const SectionContentElements = {
   Container,
   Subtitle,
@@ -66,4 +75,5 @@ export const SectionContentElements = {
   Body,
   ButtonsContainer,
   StyledSectionButton,
+  FloatingImage
 };
