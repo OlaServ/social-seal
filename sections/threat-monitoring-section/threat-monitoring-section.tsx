@@ -42,7 +42,7 @@ export const ThreatMonitoringSection = ({
       <el.StyledFlyingIcon
         imageUrl="/assets/images/circle.svg"
         variant="reverse"
-        animationDuration={20}
+        animationDuration={18}
         containerRef={leftColumnRef}
       /> 
     </el.Container>
