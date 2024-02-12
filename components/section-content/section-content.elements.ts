@@ -50,7 +50,8 @@ const ButtonsContainer = styled(Flex, {
     justifyContent: { base: "center", lg: "flex-start" },
     mt: { base: "26px", md: "56px", lg: "0" },
     position: "relative",
-    w: "max-content"
+    w: "max-content",
+    alignSelf: { base: "center", lg: "flex-start" },
   },
 });
 
@@ -75,5 +76,5 @@ export const SectionContentElements = {
   Body,
   ButtonsContainer,
   StyledSectionButton,
-  FloatingImage
+  FloatingImage,
 };
