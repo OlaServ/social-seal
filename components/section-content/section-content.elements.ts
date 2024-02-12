@@ -1,4 +1,5 @@
 import { styled, Flex, Text } from "@chakra-ui/react";
+import { SectionContentButton } from "../section-content-button/section-content-button";
 
 const Container = styled(Flex, {
   baseStyle: {
@@ -46,8 +47,15 @@ const Body = styled(Text, {
 const ButtonsContainer = styled(Flex, {
   baseStyle: {
     width: "100%",
-    justifyContent: { base: "center", lg: "space-between" },
+    justifyContent: { base: "center", lg: "flex-start" },
     mt: { base: "26px", md: "56px", lg: "0" },
+  },
+});
+
+const StyledSectionButton = styled(SectionContentButton, {
+  baseStyle: {
+    background: "primary.white",
+    color: "primary.blue",
   },
 });
 
@@ -57,4 +65,5 @@ export const SectionContentElements = {
   Title,
   Body,
   ButtonsContainer,
+  StyledSectionButton,
 };

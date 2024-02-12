@@ -5,7 +5,6 @@ import { GridProps } from "@chakra-ui/react";
 import { InboxManagementSectionElements as el } from "./inbox-management-section.elements";
 import { SectionContent } from "@/components/section-content/section-content";
 import { ISectionWithButtons } from "@/domain/sections.t";
-import { SectionContentButton } from "@/components/section-content-button/section-content-button";
 
 interface IInboxManagementSectionProps extends GridProps {
   sectionData: ISectionWithButtons;
@@ -34,7 +33,7 @@ export const InboxManagementSection = ({
       )}
       {isMobile && (
         <el.StyledButton>
-          {sectionData.sectionButtonOneText}
+          {sectionData.sectionButtonOne.sectionButtonOneText}
         </el.StyledButton>
       )}
     </el.Container>

@@ -15,8 +15,8 @@ export const SectionContent = ({
   sectionTitle,
   sectionBody,
   sectionSubtitle,
-  sectionButtonOneText,
-  onClickSectionButton,
+  sectionButtonOne,
+  sectionButtonTwo,
   pills,
   showButtonOnMobile = false,
   children,
@@ -30,13 +30,18 @@ export const SectionContent = ({
       <el.Subtitle>{sectionSubtitle}</el.Subtitle>
       <el.Title as="h2">{sectionTitle}</el.Title>
       <el.Body>{...parsedText}</el.Body>
-      {pills && <Pills {...pills}/>}
+      {pills && <Pills {...pills} />}
       {(!isMobile || showButtonOnMobile) && (
-           <el.ButtonsContainer>
-           <SectionContentButton size="large" onClick={onClickSectionButton}>
-            {sectionButtonOneText}
+        <el.ButtonsContainer>
+          <SectionContentButton size="large">
+            {sectionButtonOne.sectionButtonOneText}
           </SectionContentButton>
-         </el.ButtonsContainer>
+          {!isMobile && sectionButtonTwo && (
+            <el.StyledSectionButton>
+              {sectionButtonTwo.sectionButtonTwoText}
+            </el.StyledSectionButton>
+          )}
+        </el.ButtonsContainer>
       )}
     </el.Container>
   );

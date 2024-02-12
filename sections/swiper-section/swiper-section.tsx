@@ -43,7 +43,7 @@ export const SwiperSection = ({
       />
       {isMobile && (
         <el.ViewMoreButton size="large">
-          {sectionData.sectionButtonOneText}
+          {sectionData.sectionButtonOne.sectionButtonOneText}
         </el.ViewMoreButton>
       )}
     </el.Container>

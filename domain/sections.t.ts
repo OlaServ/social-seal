@@ -7,10 +7,13 @@ export interface ISection {
 }
 
 export interface ISectionWithButtons extends ISection {
-  sectionButtonOneText: string;
-  onClickSectionButton?: () => void;
-  sectionButtonTwoText?: string;
-  onClickSectionButtonTwo?: () => void;
+  sectionButtonOne: {
+    sectionButtonOneText: string;
+  };
+  sectionButtonTwo?: {
+    sectionButtonTwoText: string;
+
+  };
 }
 
 export interface ICounter {

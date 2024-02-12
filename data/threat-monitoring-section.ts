@@ -3,7 +3,13 @@ import { ISectionWithButtons } from "@/domain/sections.t";
 export const ThreatMonitoringSectionData: ISectionWithButtons = {
   sectionTitle: "Social Gossiping Slowing You Down?",
   sectionSubtitle: "Keeping You Covered",
-  sectionButtonOneText: "Protect Your Brand",
+  sectionButtonOne: {
+    sectionButtonOneText: "Protect Your Brand"
+  },
+
+  sectionButtonTwo: {
+    sectionButtonTwoText: "Find Out more",
+  },
   pills: {
     pillsTitle: "The most common threats we encounter:",
     pillsList: [
