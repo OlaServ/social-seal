@@ -40,3 +40,8 @@ export interface IBrandSection {
   swipers: Array<Array<string>>;
   bottomText: string;
 }
+
+export interface ICreativeDesignSection {
+  sectionData: ISectionWithButtons;
+  list: { listTitle: string; listItems: Array<string> };
+}

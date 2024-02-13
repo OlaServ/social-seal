@@ -6,8 +6,8 @@ const Container = styled(Flex, {
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    bgGradient: "linear(to-r, #ffffff, #f2faff, #ffffff)",
-    h: "100vh"
+    bgGradient: "linear(to-b, #ffffff, #f2faff, #ffffff)",
+  
   },
 });
 
