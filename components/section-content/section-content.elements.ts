@@ -2,6 +2,7 @@ import { styled, Flex, Text } from "@chakra-ui/react";
 import { SectionContentButton } from "../section-content-button/section-content-button";
 import { AnimatedShape } from "../animated-shape/animated-shape";
 import { SectionTitle } from "../section-title/section-title";
+import { SectionBody } from "../section-body/section-body";
 
 const Container = styled(Flex, {
   baseStyle: {
@@ -29,13 +30,8 @@ const Title = styled(SectionTitle, {
   },
 });
 
-const Body = styled(Text, {
+const Body = styled(SectionBody, {
   baseStyle: {
-    fontSize: "20px",
-    lineHeight: "32px",
-    fontWeight: 300,
-    color: "primary.gray",
-    whiteSpace: "pre-line",
     mb: { base: "0", lg: "32px" },
     px: { base: "0", md: "16px", lg: "0" },
   },
@@ -46,7 +42,7 @@ const ButtonsContainer = styled(Flex, {
     justifyContent: { base: "center", lg: "flex-start" },
     mt: { base: "26px", md: "56px", lg: "0" },
     position: "relative",
-    w: "max-content",
+    w: {base: "100%", lg: "max-content"},
     alignSelf: { base: "center", lg: "flex-start" },
   },
 });

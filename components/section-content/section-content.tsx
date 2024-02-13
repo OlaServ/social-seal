@@ -3,7 +3,6 @@ import { MobileContext } from "@/context/mobile-context";
 import { FlexProps } from "@chakra-ui/react";
 import { SectionContentElements as el } from "./section-content.elements";
 import { ISectionWithButtons } from "@/domain/sections.t";
-import { TextParser } from "@/helpers/text-parser";
 import { SectionContentButton } from "../section-content-button/section-content-button";
 import { Pills } from "../pills/pills";
 
@@ -24,14 +23,13 @@ export const SectionContent = ({
   children,
   ...rest
 }: ISectionContentProps) => {
-  const parsedText = TextParser.renderFormattedText(sectionBody);
   const { isMobile } = useContext(MobileContext);
 
   return (
     <el.Container {...rest}>
       <el.Subtitle variant="subtitle">{sectionSubtitle}</el.Subtitle>
       <el.Title>{sectionTitle}</el.Title>
-      <el.Body>{...parsedText}</el.Body>
+      <el.Body bodyText={sectionBody} />
       {pills && <Pills {...pills} />}
       {(!isMobile || showButtonOnMobile) && (
         <el.ButtonsContainer>
@@ -43,10 +41,12 @@ export const SectionContent = ({
               {sectionButtonTwo.sectionButtonTwoText}
             </el.StyledSectionButton>
           )}
-            {!isMobile && showButtonArrow && <el.FloatingImage
-            imageUrl="/assets/images/shapes/shape-4.svg"
-            animationVariant="float"
-          />}
+          {!isMobile && showButtonArrow && (
+            <el.FloatingImage
+              imageUrl="/assets/images/shapes/shape-4.svg"
+              animationVariant="float"
+            />
+          )}
         </el.ButtonsContainer>
       )}
     </el.Container>

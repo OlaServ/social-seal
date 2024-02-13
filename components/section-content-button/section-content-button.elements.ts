@@ -7,6 +7,7 @@ const StyledButton = styled(Button, {
     color: "primary.white",
     justifySelf: { base: "center", lg: "flex-start" },
     alignSelf: { base: "center", lg: "flex-start" },
+    w: { base: "100%", md: "max-content" },
   },
 });
 

@@ -8,7 +8,7 @@ import {
   Image,
   Center,
 } from "@chakra-ui/react";
-import { Button } from "../../components/button/button";
+import { SectionContentButton } from "@/components/section-content-button/section-content-button";
 import { Carousel } from "../../components/carousel/carousel";
 
 const Container = styled(Flex, {
@@ -68,18 +68,19 @@ const H1 = styled(Text, {
 const ButtonsContainer = styled(Flex, {
   baseStyle: {
     mt: { base: "42px", lg: "66px" },
+    w: { base: "100%", md: "max-content" },
   },
 });
 
-const PlansButton = styled(Button, {
+const PlansButton = styled(SectionContentButton, {
   baseStyle: {
     background: "primary.blue",
     color: "primary.white",
-    mr: "12px",
+    mr: { base: "0", lg: "12px" },
   },
 });
 
-const OfferButton = styled(Button, {
+const OfferButton = styled(SectionContentButton, {
   baseStyle: {
     color: "primary.blue",
     background: "primary.white",
@@ -154,8 +155,8 @@ const StyledCarousel = styled(Carousel, {
   baseStyle: {
     mt: { base: "51px", md: "99px", lg: "55px" },
     transform: "translateY(50%)",
-  }
-})
+  },
+});
 
 export const HeroSectionElements = {
   Container,
@@ -173,5 +174,5 @@ export const HeroSectionElements = {
   SocialMediaIcons,
   MobileBottomPart,
   LogosContainer,
-  StyledCarousel
+  StyledCarousel,
 };

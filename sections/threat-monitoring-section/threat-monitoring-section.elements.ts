@@ -13,7 +13,7 @@ const Container = styled(SectionGrid, {
     gridTemplateRows: { base: "auto auto", lg: "auto" },
     gridColumnGap: "61px",
     position: "relative",
-    justifyItems: "start",
+    justifyItems: {base: "center", lg: "start"},
     alignItems: "center",
     overflowX: "clip",
   },
@@ -35,7 +35,7 @@ const StyledFlyingIcon = styled(FlyingIcon, {
 });
 
 const LeftColumn = styled(Flex, {
-  w: "100%",
+  w: { base: "100%", lg: "auto" },
   h: "100%",
   position: "relative",
 });

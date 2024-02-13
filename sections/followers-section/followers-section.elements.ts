@@ -2,11 +2,10 @@ import { Image, styled } from "@chakra-ui/react";
 import { SectionGrid } from "@/components/section-grid/section-grid";
 import { SectionContent } from "@/components/section-content/section-content";
 import { AnimatedShape } from "@/components/animated-shape/animated-shape";
-import { SectionContentButton } from "@/components/section-content-button/section-content-button";
 
 const Container = styled(SectionGrid, {
   baseStyle: {
-    px: { base: "16px", sm: "84px", lg: "120px" },
+    px: { base: "16px", sm: "24px", lg: "120px" },
     pb: { base: "0", sm: "0px", lg: "182px" },
     position: "relative",
     gridTemplateColumns: { base: "1fr", lg: "1.02fr 1fr" },
