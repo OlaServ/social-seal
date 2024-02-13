@@ -11,6 +11,7 @@ import { ThreatMonitoringSection } from "@/sections/threat-monitoring-section/th
 import { ThreatMonitoringSectionData } from "@/data/threat-monitoring-section";
 import { BrandSectionData } from "@/data/brand-section";
 import { BrandSection } from "@/sections/brand-section/brand-section";
+import { GradientContainer } from "@/components/gradient-container/gradient-container";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <FollowersSection sectionData={FollowersSectionData} />
       <ThreatMonitoringSection sectionData={ThreatMonitoringSectionData} />
       <BrandSection {...BrandSectionData} />
+      <GradientContainer></GradientContainer>
     </main>
   );
 }
