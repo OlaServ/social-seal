@@ -68,7 +68,7 @@ const H1 = styled(Text, {
 const ButtonsContainer = styled(Flex, {
   baseStyle: {
     mt: { base: "42px", lg: "66px" },
-    w: {base: "max-content", lg: "100%"},
+    w: { base: "100%", md: "max-content" },
   },
 });
 
