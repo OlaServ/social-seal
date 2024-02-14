@@ -11,6 +11,7 @@ const Item = styled(ListItem, {
     bgPos: "left center",
     bgSize: "20px",
     pl: "30px",
+    fontWeight: "500"
   },
 });
 

@@ -14,6 +14,8 @@ import { BrandSection } from "@/sections/brand-section/brand-section";
 import { GradientContainer } from "@/components/gradient-container/gradient-container";
 import { CreativeDesignSectionData } from "@/data/creative-design-section";
 import { CreativeDesignSection } from "@/sections/creative-designs-section/creative-designs-section";
+import { WhatWeDoSection } from "@/sections/what-we-do-section/what-we-do-section";
+import { WhatWeDoSectionData } from "@/data/what-we-do-section";
 
 export default function Home() {
   return (
@@ -27,6 +29,7 @@ export default function Home() {
       <BrandSection {...BrandSectionData} />
       <GradientContainer>
         <CreativeDesignSection {...CreativeDesignSectionData} />
+        <WhatWeDoSection {...WhatWeDoSectionData} />
       </GradientContainer>
     </main>
   );

@@ -7,7 +7,7 @@ export const CreativeDesignSectionData: ICreativeDesignSection = {
     sectionBody:
       "Staying on top of how your brand is being used is an important aspect to protect your identity and reputation.",
     sectionButtonOne: {
-      sectionButtonOneText: "Discover More",
+      sectionButtonText: "Discover More",
     },
   },
   list: {

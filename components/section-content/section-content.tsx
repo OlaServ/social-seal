@@ -34,11 +34,11 @@ export const SectionContent = ({
       {(!isMobile || showButtonOnMobile) && (
         <el.ButtonsContainer>
           <SectionContentButton size="large">
-            {sectionButtonOne.sectionButtonOneText}
+            {sectionButtonOne.sectionButtonText}
           </SectionContentButton>
           {!isMobile && sectionButtonTwo && (
             <el.StyledSectionButton>
-              {sectionButtonTwo.sectionButtonTwoText}
+              {sectionButtonTwo.sectionButtonText}
             </el.StyledSectionButton>
           )}
           {!isMobile && showButtonArrow && (

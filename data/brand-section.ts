@@ -5,7 +5,7 @@ export const BrandSectionData: IBrandSection = {
     sectionTitle: "We Can’t Wait To Redefine Your Brand",
     sectionSubtitle: "Our Expertise is Your Success",
     sectionButtonOne: {
-      sectionButtonOneText: "Discover More",
+      sectionButtonText: "Discover More",
     },
   },
   swipers: [

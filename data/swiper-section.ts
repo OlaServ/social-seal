@@ -5,7 +5,7 @@ export const SwiperSectionData: ISwiperSection = {
     sectionTitle: "Struggling to Make Engaging Content?",
     sectionSubtitle: "Our Expertise is Your Success",
     sectionButtonOne: {
-      sectionButtonOneText: "View More",
+      sectionButtonText: "View More",
     },
     sectionBody:
       "From the research and planning to creating striking images and videos for your posts, our service focuses on creating a <u>unique voice</u> for your brand that will <u>engage your audience</u> and keep them coming back for more!",

@@ -4,11 +4,11 @@ export const ThreatMonitoringSectionData: ISectionWithButtons = {
   sectionTitle: "Social Gossiping Slowing You Down?",
   sectionSubtitle: "Keeping You Covered",
   sectionButtonOne: {
-    sectionButtonOneText: "Protect Your Brand"
+    sectionButtonText: "Protect Your Brand"
   },
 
   sectionButtonTwo: {
-    sectionButtonTwoText: "Find Out more",
+    sectionButtonText: "Find Out more",
   },
   pills: {
     pillsTitle: "The most common threats we encounter:",

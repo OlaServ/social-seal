@@ -53,7 +53,7 @@ export const BrandSection = ({
       <el.BottomRow>
         <el.BottomText>{bottomText}</el.BottomText>
         <el.StyledButton>
-          {sectionButtonOne.sectionButtonOneText}
+          {sectionButtonOne.sectionButtonText}
         </el.StyledButton>
       </el.BottomRow>
     </el.Container>
