@@ -1,4 +1,5 @@
 import { IPills } from "./pills.t";
+import { ICard } from "./card.t";
 
 export interface ISection {
   sectionSubtitle: string;
@@ -7,13 +8,13 @@ export interface ISection {
   pills?: IPills;
 }
 
+interface ISectionButton {
+  sectionButtonText: string;
+}
+
 export interface ISectionWithButtons extends ISection {
-  sectionButtonOne: {
-    sectionButtonOneText: string;
-  };
-  sectionButtonTwo?: {
-    sectionButtonTwoText: string;
-  };
+  sectionButtonOne: ISectionButton;
+  sectionButtonTwo?: ISectionButton;
 }
 
 export interface ICounter {
@@ -44,4 +45,9 @@ export interface IBrandSection {
 export interface ICreativeDesignSection {
   sectionData: ISectionWithButtons;
   list: { listTitle: string; listItems: Array<string> };
+}
+
+export interface IWhatWeDoSection {
+  sectionData: ISectionWithButtons;
+  cards: Array<ICard>;
 }

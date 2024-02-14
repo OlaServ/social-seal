@@ -4,7 +4,6 @@ import { SectionBody } from "@/components/section-body/section-body";
 import { List } from "@/components/list/list";
 import { ICreativeDesignSection } from "@/domain/sections.t";
 import { FlexProps } from "@chakra-ui/react";
-import { SectionContentButton } from "@/components/section-content-button/section-content-button";
 
 interface ICreativeDesignSectionProps
   extends ICreativeDesignSection,
@@ -32,7 +31,7 @@ export const CreativeDesignSection = ({
           <el.GradientText>{listTitle}</el.GradientText>
           <List listItems={listItems} />
           <el.StyledButton>
-            {sectionButtonOne.sectionButtonOneText}
+            {sectionButtonOne.sectionButtonText}
           </el.StyledButton>
         </el.RightColumn>
       </el.BottomContainer>

@@ -13,6 +13,7 @@ const Subtitle = styled(Text, {
   baseStyle: {
     fontSize: "20px",
     lineHeight: "1.1",
+    fontWeight: 500,
   },
 });
 
